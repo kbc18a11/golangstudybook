@@ -1,13 +1,25 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
 
-	"./foo"
-)
+func init() {
+	fmt.Println(1)
+}
+
+func init() {
+	fmt.Println(3)
+}
 
 func main() {
-	fmt.Println(foo.Max)
-	fmt.Println(foo.FooFunc(1))
-	fmt.Println(foo.internalFunc(1))
+	n := 3
+
+	switch {
+	case n < 2:
+		fmt.Println("1 or 2")
+	case n < 4:
+		fmt.Println("3 or 4")
+
+	default:
+		fmt.Println("ああ")
+	}
 }
