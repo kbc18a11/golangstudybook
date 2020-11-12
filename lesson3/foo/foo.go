@@ -9,6 +9,7 @@ func FooFunc(n int) int {
 	return internalFunc(n)
 }
 
-func internalFunc(n int) int {
+func 
+(n int) int {
 	return n + 1
 }
