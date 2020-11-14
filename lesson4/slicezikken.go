@@ -2,13 +2,18 @@ package main
 
 import "fmt"
 
-func main() {
-	s := make([]int, 10, 20)
-	fmt.Println(s)
-	fmt.Println(cap(s))
-	for i := 0; i < 20; i++ {
-		s = append(s, i)
+func homo(a [3]int) {
+	for i, v := range a {
+		a[i] = v * v
 	}
-	fmt.Println(s)
-	fmt.Println(cap(s))
+
+	return
+}
+
+func main() {
+	a := [3]int{1, 2, 3}
+
+	homo(a)
+
+	fmt.Println(a)
 }
