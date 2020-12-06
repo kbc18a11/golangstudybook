@@ -14,4 +14,12 @@ func main() {
 	if _, ok := m["ch"]; !ok {
 		fmt.Println("ないよ")
 	}
+
+	for key, value := range m {
+		fmt.Print(key + ":")
+		fmt.Println(value)
+	}
+
+	delete(m, "homo")
+	fmt.Println(len(m))
 }
